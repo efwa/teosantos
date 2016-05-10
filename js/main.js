@@ -1,3 +1,62 @@
+
+function toggle(theClass, displayState){
+    var elements = document.getElementsByClassName(theClass)
+
+    for (var i = 0; i < elements.length; i++){
+        elements[i].style.display = displayState;
+    }
+}
+
+
+
+var navClients = document.querySelectorAll('.section-clients')[0];
+
+navClients.addEventListener('click', function(e) {
+  document.getElementsByTagName('body')[0].classList.add('open');
+  e.preventDefault();
+});
+
+
+[].forEach.call(document.querySelectorAll('.nav-item'), function(el) {
+  
+  var section = el.getAttribute('data-section')
+
+  el.addEventListener('click', function(e) {
+      
+      removeSelected();
+
+      // Bit of code to remove wildcard class from body
+      // http://stackoverflow.com/a/10835425
+      var prefix = "section";
+      var classes = document.getElementsByTagName('body')[0].className.split(" ").filter(function(c) {
+          return c.lastIndexOf(prefix, 0) !== 0;
+      });
+      document.getElementsByTagName('body')[0].className = classes.join(" ").trim();
+
+      
+      console.info("open section: " + section);
+      document.getElementsByTagName('body')[0].classList.add(section);
+      
+      el.classList.add("selected");
+      
+      e.preventDefault();
+  })
+})
+
+
+
+function removeSelected(){
+  var navItems = document.querySelectorAll('.nav-item');
+
+  for (var i = 0, len = navItems.length; i < len; i++) {
+      navItems[i].classList.remove('selected');
+  }    
+}
+
+
+
+
+
 THREE.ImageUtils.crossOrigin = '';
 
 var enviromap = {

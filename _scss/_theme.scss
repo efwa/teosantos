@@ -18,6 +18,21 @@ body {
 
 }
 
+
+.inputsansthin {
+  font-family: "Input Sans Thin";
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+.inputsanslight {
+  font-family: "Input Sans Light";
+  font-style: normal;
+  font-weight: normal;
+}
+
+
 .fw-300 {
   font-weight:400;
 }
@@ -67,7 +82,7 @@ h6 {
 
 
 small, .small 
-{ font-size: .75em; }
+{ font-size: .85em; }
 
 
 blockquote em {
@@ -130,16 +145,17 @@ blockquote em a {
 
 }
 
-$link-underlin-color: #0005FF;
+$link-underlin-color: #3DC070;
 a, .a-underline {
-
-  text-decoration: none;
-  color:$link-underlin-color;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(87%, transparent), color-stop(92%, $link-underlin-color), color-stop(95%, transparent), color-stop(84%, transparent));
-  background-image: -webkit-linear-gradient(to bottom, transparent 94%, $link-underlin-color 96%, $link-underlin-color 100%);
-  background-image: -moz-linear-gradient(to bottom, transparent 94%, $link-underlin-color 96%, $link-underlin-color 100%);
-  background-image: -o-linear-gradient(to bottom, transparent 94%, $link-underlin-color 96%, $link-underlin-color 100%);
-  background-image: linear-gradient(to bottom, transparent 94%, $link-underlin-color 96%, $link-underlin-color 100%);
+    background-image: none;
+    text-decoration:none;
+    color:$link-underlin-color;
+  
+  // background-image: -webkit-gradient(linear, left top, left bottom, color-stop(87%, transparent), color-stop(92%, $link-underlin-color), color-stop(95%, transparent), color-stop(84%, transparent));
+  // background-image: -webkit-linear-gradient(to bottom, transparent 94%, $link-underlin-color 96%, $link-underlin-color 100%);
+  // background-image: -moz-linear-gradient(to bottom, transparent 94%, $link-underlin-color 96%, $link-underlin-color 100%);
+  // background-image: -o-linear-gradient(to bottom, transparent 94%, $link-underlin-color 96%, $link-underlin-color 100%);
+  // background-image: linear-gradient(to bottom, transparent 94%, $link-underlin-color 96%, $link-underlin-color 100%);
 }
 
 
@@ -153,13 +169,38 @@ a, .a-underline {
 }
 
 
-
-
-
 a:hover, .a-underline:hover {
-  background-image: none;
   text-decoration:none;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(87%, transparent), color-stop(92%, $link-underlin-color), color-stop(95%, transparent), color-stop(84%, transparent));
+  background-image: -webkit-linear-gradient(to bottom, transparent 94%, $link-underlin-color 96%, $link-underlin-color 100%);
+  background-image: -moz-linear-gradient(to bottom, transparent 94%, $link-underlin-color 96%, $link-underlin-color 100%);
+  background-image: -o-linear-gradient(to bottom, transparent 94%, $link-underlin-color 96%, $link-underlin-color 100%);
+  background-image: linear-gradient(to bottom, transparent 94%, $link-underlin-color 96%, $link-underlin-color 100%);  
 }
+
+
+
+
+
+$selected-underlin-color: #3DC070;
+.selected {
+  text-decoration: none;
+  color:$selected-underlin-color;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(87%, transparent), color-stop(92%, $selected-underlin-color), color-stop(95%, transparent), color-stop(84%, transparent));
+  background-image: -webkit-linear-gradient(to bottom, transparent 94%, $selected-underlin-color 96%, $selected-underlin-color 100%);
+  background-image: -moz-linear-gradient(to bottom, transparent 94%, $selected-underlin-color 96%, $selected-underlin-color 100%);
+  background-image: -o-linear-gradient(to bottom, transparent 94%, $selected-underlin-color 96%, $selected-underlin-color 100%);
+  background-image: linear-gradient(to bottom, transparent 94%, $selected-underlin-color 96%, $selected-underlin-color 100%);
+}
+
+
+
+
+
+
+
+
+
 
 
 @media screen and (max-width: 639px) {
@@ -231,4 +272,186 @@ a:hover, .a-underline:hover {
 /*      mix-blend-mode: screen; */
       margin: auto;
     }
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, .95);
+    z-index: 9999
+}
+
+.overlay-cell {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle
+}
+
+.overlay .overlay-inner {
+    width: 100%;
+    padding: 110px 0 0 25px;
+    text-align: left;
+    position: relative;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    float: left
+}
+
+.overlay .overlay-inner ul li a.facebook:hover {
+    color: #3B5998
+}
+
+.overlay .overlay-inner ul li a.twitter:hover {
+    color: #4099ff
+}
+
+.overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 30px;
+    display: inline-block;
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+
+.overlay ul li {
+    display: block;
+    font-size: 24px;
+    line-height: 24px;
+    margin: 0 0 15px;
+    font-weight: 200;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: -webkit-transform .3s, opacity .1s, visibility 0s .2s;
+    transition: transform .3s, opacity .1s, visibility 0s .2s;
+    -webkit-transform: translate3d(0, -300%, 0);
+    transform: translate3d(0, -300%, 0)
+}
+
+.overlay ul li:last-child {
+    margin: 0
+}
+
+.overlay ul li a.current,
+.overlay ul li a:hover {
+    color: #e94767
+}
+
+.overlay ul li a {
+    display: block;
+    color: #2a2a29;
+    -webkit-transition: opacity .2s;
+    transition: opacity .2s
+}
+
+.overlay {
+    visibility: hidden;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-transition: -webkit-transform .4s ease-in-out, visibility 0s .4s;
+    transition: transform .4s ease-in-out, visibility 0s .4s
+}
+
+
+
+    .open .overlay ul li:first-child {
+        -webkit-transition-delay: .35s;
+        transition-delay: .25s
+    }
+    .open .overlay ul li:nth-child(2) {
+        -webkit-transition-delay: .3s;
+        transition-delay: .2s
+    }
+    .open .overlay ul li:nth-child(3) {
+        -webkit-transition-delay: .25s;
+        transition-delay: .15s
+    }
+    .open .overlay ul li:nth-child(4) {
+        -webkit-transition-delay: .2s;
+        transition-delay: .1s
+    }
+    .open .overlay ul li:nth-child(5) {
+        -webkit-transition-delay: .15s;
+        transition-delay: .1s
+    }
+    .open .overlay ul li:nth-child(6) {
+        -webkit-transition-delay: .1s;
+        transition-delay: .1s
+    }
+    .open .overlay ul li:last-child {
+        -webkit-transition-delay: .05s;
+        transition-delay: .05s
+    }
+    .open .overlay ul li {
+        visibility: visible;
+        opacity: 1;
+        -webkit-transition: -webkit-transform .7s, opacity .1s .7s;
+        transition: transform .7s, opacity 1s;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+    .open .overlay {
+        visibility: visible;
+        -webkit-transform: translateY(0%);
+        transform: translateY(0%);
+        -webkit-transition: -webkit-transform .4s ease-in-out;
+        transition: transform .4s ease-in-out
+    }
+
+
+
+.fn-section {
+  display:none;
+}
+
+
+body.section-about .section-about,
+body.section-process .section-process,
+body.section-clients .section-clients,
+body.section-contact .section-contact {
+  display:block;
+}
+
+
+
+
+
+
+
+// Responsive Type
+
+
+/* Basscss Responsive Margin */
+
+@media #{$breakpoint-xs} {
+
+.h1 { font-size: 6vw; }
+
+}
+
+
+@media #{$breakpoint-sm} {
+
+
+
+}
+
+@media #{$breakpoint-md} {
+
+
+
+}
+
+@media #{$breakpoint-lg} {
+
+
+
+}
+
+
+
+
 

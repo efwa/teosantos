@@ -6,7 +6,7 @@ var enviromap = {
   settings : {
     alpha: "1",
     flip: false,
-    geometry: "/js/geometry.obj",
+    geometry: "/js/geometry.json",
     mouse_interaction: true,
     mouse_speed: 100,
     overlay_type: "screen_color",

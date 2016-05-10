@@ -7,23 +7,16 @@
   <title>Teosantos</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-  <script src="https://use.typekit.net/ngy2geb.js"></script>
-  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
+  <style>
+  {% capture include_to_scssify %}
+    {% include main.scss %}
+  {% endcapture %}
+  {{ include_to_scssify | scssify }}
+  </style>
 
-  <!-- <script src="/js/main.js"></script> -->
-
-  <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-
-
-<!-- <script src="/js/api.js"></script>
-<script src="/js/api.js"></script>
-<script src="/js/dw.js"></script>
-<script src="/js/kalei.js"></script> -->
-    
-
-
+  <link href="//cloud.webtype.com/css/1a9b31e4-24b2-4b34-8012-80c77c3f8afe.css" rel="stylesheet" type="text/css" />
 
 </head>

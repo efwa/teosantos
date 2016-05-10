@@ -21,13 +21,6 @@
         <div class="col sm-col-6">
           
 
-
-        
-            <script src="{{ site.baseurl }}/js/404_files/three.min.js"></script>
-            <script src="{{ site.baseurl }}/js/404_files/OBJLoader.js"></script>
-            <script src="{{ site.baseurl }}/js/404_files/main.js"></script>
-
-
         </div>
 
         <div class="col sm-col-8 mb3">
@@ -230,6 +223,14 @@
 
 
     </div>
+
+  
+
+  <script src="{{ site.baseurl }}/js/404_files/three.min.js"></script>
+  <script>
+    {% include OBJLoader.js %}{% include main.js %}
+  </script>
+
 
 
   </body>

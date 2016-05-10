@@ -229,6 +229,7 @@ var enviromap = {
 
     var path = "";
     var geomURL = this.settings.geometry;
+    var geomText = this.settings.geometry_json;
 
     this.three_data.obj_loader.load( geomURL , onObjLoad)
 

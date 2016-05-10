@@ -1,0 +1,234 @@
+body { margin: 0 }
+img { max-width: 100% }
+svg { max-height: 100% }
+
+// html, body {
+// position: fixed;
+// }
+
+body {
+  color: #555555;
+  background:#F9F9F9;
+  font-family: $font-family;
+  font-weight:400;
+  line-height: $line-height;
+  font-size: 100%;
+  //border-left:20px solid #FFF858;  
+
+
+}
+
+.fw-300 {
+  font-weight:400;
+}
+
+
+
+
+p {
+  hyphens: none;
+  margin-bottom: $space-3-4;
+}
+
+
+
+p > .h1 {
+  line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+  line-height: $heading-line-height;
+  margin-top: 1em;
+  margin-bottom: .5em;
+}
+
+
+.h0 {
+  font-weight:200;
+}
+
+
+
+.center-top {
+  position: relative;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+
+
+small, .small 
+{ font-size: .75em; }
+
+
+blockquote em {
+  color:#9ca2ad;
+  font-style: normal;
+  font-size:15px;
+  margin-top:10px;
+  display:block;
+  text-align:left;
+}
+
+blockquote em a {
+  color:#9ca2ad;
+}
+
+
+.img-circle {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+
+
+.wrap {
+  width: 90%;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 32px 5% 64px 5%;
+}
+
+
+
+.mt {margin-top:64px;}
+
+
+.post img { max-width: 100%; }
+
+.post .post-copy {width:100%;float:none;margin-left:0;}
+.post .post-thumb {height:150px;display:block;}
+.post .post-thumb img {width:100%;}
+
+
+.center { text-align: center; }
+.fl { float: left; }
+.fr { float: right; }
+
+.gray { color: #999; }
+
+
+
+.t-underline {
+
+  color:#151515;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(87%, transparent), color-stop(92%, #151515), color-stop(95%, transparent), color-stop(84%, transparent));
+  background-image: -webkit-linear-gradient(to bottom, transparent 94%, #151515 96%, #151515 100%);
+  background-image: -moz-linear-gradient(to bottom, transparent 94%, #151515 96%, #151515 100%);
+  background-image: -o-linear-gradient(to bottom, transparent 94%, #151515 96%, #151515 100%);
+  background-image: linear-gradient(to bottom, transparent 94%, #151515 96%, #151515 100%);
+
+}
+
+$link-underlin-color: #0005FF;
+a, .a-underline {
+
+  text-decoration: none;
+  color:$link-underlin-color;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(87%, transparent), color-stop(92%, $link-underlin-color), color-stop(95%, transparent), color-stop(84%, transparent));
+  background-image: -webkit-linear-gradient(to bottom, transparent 94%, $link-underlin-color 96%, $link-underlin-color 100%);
+  background-image: -moz-linear-gradient(to bottom, transparent 94%, $link-underlin-color 96%, $link-underlin-color 100%);
+  background-image: -o-linear-gradient(to bottom, transparent 94%, $link-underlin-color 96%, $link-underlin-color 100%);
+  background-image: linear-gradient(to bottom, transparent 94%, $link-underlin-color 96%, $link-underlin-color 100%);
+}
+
+
+.a-underline.type-link {
+  color: $blue;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(87%, transparent), color-stop(92%, $blue), color-stop(95%, #fdfdfd), color-stop(84%, transparent));
+  background-image: -webkit-linear-gradient(to bottom, transparent 94%, $blue 96%, $blue 100%);
+  background-image: -moz-linear-gradient(to bottom, transparent 94%, $blue 96%, $blue 100%);
+  background-image: -o-linear-gradient(to bottom, transparent 94%, $blue 96%, $blue 100%);
+  background-image: linear-gradient(to bottom, transparent 94%, $blue 96%, $blue 100%);
+}
+
+
+
+
+
+a:hover, .a-underline:hover {
+  background-image: none;
+  text-decoration:none;
+}
+
+
+@media screen and (max-width: 639px) {
+
+  blockquote,
+  blockquote p {
+    font-size: $h4;
+    font-style: italic;
+  }
+
+
+}
+
+
+
+.panel-1  {
+
+  background-color:#262626;
+  color:#C7C7C7;
+    
+}
+
+.logo path {
+  fill: #151515;
+}
+
+
+    #holder_measurement {
+      position: absolute;
+      height:100%;
+      width:100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    #three_canvas_holder {
+/*      background-color: #09f; */
+      background-image:url("/images/saint.png");
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      height:100%;
+      width:100%;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      bottom: 0;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+/*
+    #three_canvas_holder.mix_blend {
+      background-color: transparent;
+      mix-blend-mode: screen;
+    }
+*/
+
+    #three_canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+/*      mix-blend-mode: screen; */
+      margin: auto;
+    }
+

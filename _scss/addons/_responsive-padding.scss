@@ -10,6 +10,17 @@
   .sm-px0 { padding-left:   0; padding-right:  0 }
   .sm-py0 { padding-top:    0; padding-bottom: 0 }
 
+  // .5
+  .sm-p05  { padding:        $space-1 / 2 }
+  .sm-pt05 { padding-top:    $space-1 / 2 }
+  .sm-pr05 { padding-right:  $space-1 / 2 }
+  .sm-pb05 { padding-bottom: $space-1 / 2 }
+  .sm-pl05 { padding-left:   $space-1 / 2 }
+  .sm-px05 { padding-left:   $space-1 / 2; padding-right:  $space-1 / 2 }
+  .sm-py05 { padding-top:    $space-1 / 2; padding-bottom: $space-1 / 2 }
+
+
+
   .sm-p1  { padding:        $space-1 }
   .sm-pt1 { padding-top:    $space-1 }
   .sm-pr1 { padding-right:  $space-1 }

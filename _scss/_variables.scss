@@ -2,7 +2,7 @@
 // ---------------------------
 
 $aqua: #7fdbff !default;
-$blue: #0074d9 !default;
+$blue: #4a41f8 !default;
 $navy: #001f3f !default;
 $teal: #39cccc !default;
 $green: #2ecc40 !default;
@@ -74,16 +74,16 @@ $border-radius: 3px !default;
 
 
 $font-family: "Input Sans", "Helvetica Neue",Helvetica,Arial,sans-serif;
-$heading-font-family: "Input Sans", "Helvetica Neue",Helvetica,Arial,sans-serif;
+$heading-font-family: "brandon-grotesque", "Helvetica Neue",Helvetica,Arial,sans-serif;
 
-$heading-font-weight: normal;
+$heading-font-weight: 700;
 $heading-line-height: 1.25;
 
 // Buttons and Forms
 
-$button-font-family: inherit !default;
+$button-font-family: "Input Sans Thin", "Helvetica Neue",Helvetica,Arial,sans-serif;
 $button-font-size: inherit !default;
-$button-font-weight: $bold-font-weight !default;
+$button-font-weight: normal;
 $button-line-height: 1.125rem !default;
 $button-padding-y: .5rem !default;
 $button-padding-x: 1rem !default;

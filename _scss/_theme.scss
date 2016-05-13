@@ -65,10 +65,6 @@ h6 {
 }
 
 
-.h0 {
-  font-weight:200;
-}
-
 
 
 .center-top {
@@ -145,8 +141,8 @@ blockquote em a {
 
 }
 
-$link-underlin-color: #3DC070;
-a, .a-underline {
+$link-underlin-color: $blue;
+.a-underline {
     background-image: none;
     text-decoration:none;
     color:$link-underlin-color;
@@ -169,7 +165,7 @@ a, .a-underline {
 }
 
 
-a:hover, .a-underline:hover {
+.a-underline:hover {
   text-decoration:none;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(87%, transparent), color-stop(92%, $link-underlin-color), color-stop(95%, transparent), color-stop(84%, transparent));
   background-image: -webkit-linear-gradient(to bottom, transparent 94%, $link-underlin-color 96%, $link-underlin-color 100%);
@@ -179,10 +175,14 @@ a:hover, .a-underline:hover {
 }
 
 
+.no-hover {
+  background-image: none !important;
+  text-decoration:none !important;
+}
 
 
 
-$selected-underlin-color: #3DC070;
+$selected-underlin-color: $blue;
 .selected {
   text-decoration: none;
   color:$selected-underlin-color;
@@ -403,6 +403,8 @@ $selected-underlin-color: #3DC070;
 
 
 
+
+
 .fn-section {
   display:none;
 }
@@ -413,10 +415,44 @@ body.section-process .section-process,
 body.section-clients .section-clients,
 body.section-contact .section-contact {
   display:block;
+   -webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 1.5s; /* Firefox < 16 */
+        -ms-animation: fadein 1.5s; /* Internet Explorer */
+         -o-animation: fadein 1.5s; /* Opera < 12.1 */
+            animation: fadein 1.5s;
 }
 
 
 
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
 
 
 
@@ -429,6 +465,8 @@ body.section-contact .section-contact {
 @media #{$breakpoint-xs} {
 
 .h1 { font-size: 6vw; }
+
+.h0 { font-size: $h1;}
 
 }
 

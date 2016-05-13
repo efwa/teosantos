@@ -1,4 +1,7 @@
+// Teosantos 2016-5-13
 
+
+// Interaction
 function toggle(theClass, displayState){
     var elements = document.getElementsByClassName(theClass)
 
@@ -9,12 +12,12 @@ function toggle(theClass, displayState){
 
 
 
-var navClients = document.querySelectorAll('.section-clients')[0];
+// var navClients = document.querySelectorAll('.section-clients')[0];
 
-navClients.addEventListener('click', function(e) {
-  document.getElementsByTagName('body')[0].classList.add('open');
-  e.preventDefault();
-});
+// navClients.addEventListener('click', function(e) {
+//   document.getElementsByTagName('body')[0].classList.add('open');
+//   e.preventDefault();
+// });
 
 
 [].forEach.call(document.querySelectorAll('.nav-item'), function(el) {
@@ -37,7 +40,22 @@ navClients.addEventListener('click', function(e) {
       console.info("open section: " + section);
       document.getElementsByTagName('body')[0].classList.add(section);
       
-      el.classList.add("selected");
+     
+        
+      var navItems = document.querySelectorAll('.nav-item');
+
+      for (var i = 0, len = navItems.length; i < len; i++) {
+          if (navItems[i].getAttribute('data-section') == section) {
+            
+              navItems[i].classList.add("selected");
+    
+          }
+      }   
+      
+
+
+
+      //el.classList.add("selected");
       
       e.preventDefault();
   })
@@ -56,6 +74,7 @@ function removeSelected(){
 
 
 
+// Background Logo
 
 THREE.ImageUtils.crossOrigin = '';
 

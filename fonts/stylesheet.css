@@ -1,0 +1,79 @@
+/*
+ * Legal Disclaimer
+ *
+ * These Fonts are licensed only for use on these domains and their subdomains:
+ * ipglab.com
+ *
+ * It is illegal to download or use them on other websites.
+ *
+ * While the @font-face statements below may be modified by the client, this
+ * disclaimer may not be removed.
+ *
+ * Lineto.com, 2012
+ */
+
+@font-face {
+    font-family: 'AkkuratRegular';
+    src: url('lineto-akkurat-regular.eot');
+    src: url('lineto-akkurat-regular.eot?#iefix') format('embedded-opentype'),
+         url('lineto-akkurat-regular.woff') format('woff'),
+         url('lineto-akkurat-regular.ttf') format('truetype'),
+         url('lineto-akkurat-regular.svg#AkkuratRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AkkuratItalic';
+    src: url('lineto-akkurat-italic.eot');
+    src: url('lineto-akkurat-italic.eot?#iefix') format('embedded-opentype'),
+         url('lineto-akkurat-italic.woff') format('woff'),
+         url('lineto-akkurat-italic.ttf') format('truetype'),
+         url('lineto-akkurat-italic.svg#AkkuratItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AkkuratBold';
+    src: url('lineto-akkurat-bold.eot');
+    src: url('lineto-akkurat-bold.eot?#iefix') format('embedded-opentype'),
+         url('lineto-akkurat-bold.woff') format('woff'),
+         url('lineto-akkurat-bold.ttf') format('truetype'),
+         url('lineto-akkurat-bold.svg#AkkuratBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AkkuratBoldItalic';
+    src: url('lineto-akkurat-bolditalic.eot');
+    src: url('lineto-akkurat-bolditalic.eot?#iefix') format('embedded-opentype'),
+         url('lineto-akkurat-bolditalic.woff') format('woff'),
+         url('lineto-akkurat-bolditalic.ttf') format('truetype'),
+         url('lineto-akkurat-bolditalic.svg#AkkuratBoldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AkkuratLight';
+    src: url('lineto-akkurat-light.eot');
+    src: url('lineto-akkurat-light.eot?#iefix') format('embedded-opentype'),
+         url('lineto-akkurat-light.woff') format('woff'),
+         url('lineto-akkurat-light.ttf') format('truetype'),
+         url('lineto-akkurat-light.svg#AkkuratLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AkkuratLightItalic';
+    src: url('lineto-akkurat-lightitalic.eot');
+    src: url('lineto-akkurat-lightitalic.eot?#iefix') format('embedded-opentype'),
+         url('lineto-akkurat-lightitalic.woff') format('woff'),
+         url('lineto-akkurat-lightitalic.ttf') format('truetype'),
+         url('lineto-akkurat-lightitalic.svg#AkkuratLightItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

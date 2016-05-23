@@ -4,6 +4,10 @@
   <meta name="viewport" content="width=device-width, user-scalable=no">
 
 
+  <title>Teosantos</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
@@ -12,11 +16,10 @@
   <meta name="msapplication-TileImage" content="/mstile-310x310.png">
 
 
+  <!-- Typography -->
   <script src="https://use.typekit.net/ngy2geb.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
-
-  <title>Teosantos</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <link href="//cloud.webtype.com/css/1a9b31e4-24b2-4b34-8012-80c77c3f8afe.css" rel="stylesheet" type="text/css" />
 
   <style>
   {% capture include_to_scssify %}
@@ -24,9 +27,4 @@
   {% endcapture %}
   {{ include_to_scssify | scssify }}
   </style>
-
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-
-  <link href="//cloud.webtype.com/css/1a9b31e4-24b2-4b34-8012-80c77c3f8afe.css" rel="stylesheet" type="text/css" />
-
 </head>

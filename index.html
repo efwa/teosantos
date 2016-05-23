@@ -1,4 +1,74 @@
 ---
 layout: default
+modus_items:
+  - title: "Observe"
+    description: "Look carefully at the challenge at hand and explore both micro and macro contexts for a fuller perspective. Bring an open mind to research, readings and observations."
+  - title: "Inquire"
+    description: "Ask sagacious questions that facilitate meaningful dialogue and creative exploration."
+  - title: "Play & Generate"
+    description: "Enjoy the process generating ideas and solutions. Play some music, bring out your favorite pens, pencils, and color markers, scissors, clay – and anything you need to map the future and expressions of those ideas. Have fun. Let the bliss of inspiration take over you and the challenge at hand (warning: this may lead to dancing and drawing, don’t be scared, unimaginable solutions come when we let go and enjoy the process)."
+  - title: "Define & Strategize"
+    description: "Put a stake in the ground. Visualize your dreams, aspirations and the impact you want to create. Map your actions and the steps that can help bring your idea to life."
+  - title: "Edit"
+    description: "Meditate on and synthesize all your ideas. Bring them down to earth so they can happen in this lifetime. Vet them against your goals and aspirations for impact. Set concious constraints in accordance to variables sensible to your time and resources."
+  - title: "Make"
+    description: "Start building. Execute your vision to the best of your ability and resources. Compromise is a powerful ally, not the driving force­­ it brings you closer to your goals."
+  - title: "Share"
+    description: "Put your idea into the world. Overcome fear and let the world test your assumptions. Ask for feedback – take it in, evaluate it."
+  - title: "Iterate"
+    description: "Maintain your vision and improve on the tactics and execution. Learn; keep making and shipping. Be happy and proud ­­ you are bringing meaningful ideas to this world."
+clients:
+  - AOL
+  - Benjamin Moore
+  - Bloomingdale's
+  - Coca­Cola
+  - Computer Associates
+  - Google
+  - Johnson & Johnson
+  - Macy’s
+  - Moleskine
+  - Eleven Lola
+  - Figliulo & Partners
+  - Nokia
+  - NBCU
+  - Principled Design
+  - RAPP
+  - W2O
+  - Walmart
 ---
+
+<!-- Section About -->
+<div class="sm-col-12 section-about fn-section h1 inputsansthin center">
+  <p>Teosantos is an experimental design laboratory of creative and novel ideas.</p> <p>Both a physical space and state of mind, Teosantos operates with experiments and inquisitive play where ideas, art, self­expression, identity and commerce collide.</p> <p>This intersection generates strategies and processes that produce daring concepts, experiences, tools and products, which focus on engaging audiences in inquiry and imagination.</p>
+</div> <!-- /.section-about -->
+
+
+
+<!-- Section Process -->
+<div class="sm-col-12 section-process fn-section">
+         
+{% for modus in page.modus_items %}
+  <div class="mb3">
+    <h3 class="mt0 h2 center blue">{{ modus.title }}</h3>
+    <p class="mb0 mt0 h2 inputsansthin center">{{ modus.description }}</p>
+  </div>  
+{% endfor %}
+
+</div> <!-- .section-process -->
+
+
+
+
+
+
+<div class="sm-col-12 section-clients fn-section">
+    <ul class="mb0 mt0 list-reset center h2 inputsansthin ">
+
+      {% for client in page.clients %}
+        <li>{{ client }}</li>
+      {% endfor %}
+
+    </ul>            
+</div> <!-- /.section-clients -->
+
 

@@ -1,7 +1,12 @@
 // Teosantos 2016-5-13
 
 
-// Interaction
+// -----------------------------------------------------------------------------------------------------------
+// Menu navigation interaction
+// -----------------------------------------------------------------------------------------------------------
+
+
+// Toggle function to change the display of an element.
 function toggle(theClass, displayState){
     var elements = document.getElementsByClassName(theClass)
 
@@ -11,21 +16,17 @@ function toggle(theClass, displayState){
 }
 
 
-
-// var navClients = document.querySelectorAll('.section-clients')[0];
-
-// navClients.addEventListener('click', function(e) {
-//   document.getElementsByTagName('body')[0].classList.add('open');
-//   e.preventDefault();
-// });
-
-
+// Go through all the .nav-items, when clicked change the section the coorisponding section. 
 [].forEach.call(document.querySelectorAll('.nav-item'), function(el) {
   
+  // Get the section from the data attribute
   var section = el.getAttribute('data-section')
 
+
+  // When a nav-item is clicked. 
   el.addEventListener('click', function(e) {
       
+      // Go ahead remove the selected state from all nav-items
       removeSelected();
 
       // Bit of code to remove wildcard class from body
@@ -35,15 +36,15 @@ function toggle(theClass, displayState){
           return c.lastIndexOf(prefix, 0) !== 0;
       });
       document.getElementsByTagName('body')[0].className = classes.join(" ").trim();
-
+    
       
-      console.info("open section: " + section);
+      // Set the val from the clicked nav-items's data-section 
       document.getElementsByTagName('body')[0].classList.add(section);
       
-     
-        
+         
       var navItems = document.querySelectorAll('.nav-item');
 
+      // Now go through all the nav=items again and set the selected state. 
       for (var i = 0, len = navItems.length; i < len; i++) {
           if (navItems[i].getAttribute('data-section') == section) {
             
@@ -52,17 +53,13 @@ function toggle(theClass, displayState){
           }
       }   
       
-
-
-
-      //el.classList.add("selected");
       
       e.preventDefault();
   })
 })
 
 
-
+// Small lil function to remove selected from all nav-items, clean sweep. 
 function removeSelected(){
   var navItems = document.querySelectorAll('.nav-item');
 
@@ -74,7 +71,9 @@ function removeSelected(){
 
 
 
-// Background Logo
+// -----------------------------------------------------------------------------------------------------------
+// Background Logo Animation 
+// -----------------------------------------------------------------------------------------------------------
 
 THREE.ImageUtils.crossOrigin = '';
 

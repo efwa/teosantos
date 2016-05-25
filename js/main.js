@@ -8,7 +8,8 @@ var teosantos = {
 
     $( ".nav-item" ).on( "click", function(event) {
       console.log("clicked");
-      event.preventDefault()
+      event.preventDefault();
+      return false;
     });
 
 

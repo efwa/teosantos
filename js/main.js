@@ -56,11 +56,8 @@ var teosantos = {
         
               }
           }   
-          
-          
-          e.preventDefault();
-          return false;
-      })
+                
+      }, false)
     })
 
 

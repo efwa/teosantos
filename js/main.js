@@ -31,7 +31,6 @@ var teosantos = {
           
           e.stopPropagation();
           e.preventDefault();
-          return false;
 
           console.log("navclicked");
           // Go ahead remove the selected state from all nav-items

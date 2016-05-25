@@ -36,6 +36,7 @@ function toggle(theClass, displayState){
   // When a nav-item is clicked. 
   el.addEventListener('click', function(e) {
       
+      e.preventDefault();
       // Go ahead remove the selected state from all nav-items
       removeSelected();
 
@@ -64,7 +65,7 @@ function toggle(theClass, displayState){
       }   
       
       
-      e.preventDefault();
+      
   })
 })
 

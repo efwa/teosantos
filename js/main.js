@@ -10,6 +10,12 @@ if (hashName == "akkurat") {
 }
 
 
+if (window.location.host === "app.cloudcannon.com") {
+  alert("Inside CloudCannon!");
+} else {
+  alert("Not in CloudCannon.");
+}
+
 
 // -----------------------------------------------------------------------------------------------------------
 // Menu navigation interaction

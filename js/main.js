@@ -29,6 +29,9 @@ var teosantos = {
       // When a nav-item is clicked. 
       el.addEventListener('click', function(e) {
           
+          e.preventDefault();
+          return false;
+
           console.log("navclicked");
           // Go ahead remove the selected state from all nav-items
           removeSelected();

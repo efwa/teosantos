@@ -1,7 +1,6 @@
 // Teosantos 2016-5-13
 
-
-console.time( 'test' );
+console.log("main.js");
 
 $( ".nav-item" ).on( "click", function(event) {
   console.log("clicked");

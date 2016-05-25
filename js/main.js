@@ -29,6 +29,7 @@ var teosantos = {
       // When a nav-item is clicked. 
       el.addEventListener('click', function(e) {
           
+          e.stopPropagation();
           e.preventDefault();
           return false;
 

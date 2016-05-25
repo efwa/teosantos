@@ -4,15 +4,6 @@ var teosantos = {
 
   Init: function(){
 
-    console.log("main.js");
-
-    $( ".nav-item" ).on( "click", function(event) {
-      console.log("clicked");
-      event.preventDefault();
-      return false;
-    });
-
-
     // -----------------------------------------------------------------------------------------------------------
     // Menu navigation interaction
     // -----------------------------------------------------------------------------------------------------------
@@ -38,6 +29,7 @@ var teosantos = {
       // When a nav-item is clicked. 
       el.addEventListener('click', function(e) {
           
+          console.log("navclicked");
           // Go ahead remove the selected state from all nav-items
           removeSelected();
 
@@ -67,6 +59,7 @@ var teosantos = {
           
           
           e.preventDefault();
+          return false;
       })
     })
 

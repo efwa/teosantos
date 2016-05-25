@@ -64,6 +64,7 @@ function toggle(theClass, displayState){
           }
       }   
       
+      return false;
       
       
   })

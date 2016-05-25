@@ -10,12 +10,6 @@ if (hashName == "akkurat") {
 }
 
 
-if (window.location.host === "app.cloudcannon.com") {
-  alert("Inside CloudCannon!");
-} else {
-  alert("Not in CloudCannon.");
-}
-
 
 // -----------------------------------------------------------------------------------------------------------
 // Menu navigation interaction
@@ -38,13 +32,10 @@ function toggle(theClass, displayState){
   // Get the section from the data attribute
   var section = el.getAttribute('data-section')
 
-  console.log(el);
 
   // When a nav-item is clicked. 
   el.addEventListener('click', function(e) {
       
-      e = e || event;/* get IE event ( not passed ) */
-      event.returnValue=false;
       // Go ahead remove the selected state from all nav-items
       removeSelected();
 
@@ -72,9 +63,8 @@ function toggle(theClass, displayState){
           }
       }   
       
-
       
-      
+      e.preventDefault();
   })
 })
 

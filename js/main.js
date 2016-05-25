@@ -32,6 +32,7 @@ function toggle(theClass, displayState){
   // Get the section from the data attribute
   var section = el.getAttribute('data-section')
 
+  console.log(el);
 
   // When a nav-item is clicked. 
   el.addEventListener('click', function(e) {

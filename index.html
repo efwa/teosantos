@@ -38,7 +38,7 @@ clients:
 ---
 
 <!-- Section About -->
-<div class="sm-col-12 section-about fn-section h1 inputsansthin center editable"">
+<div class="sm-col-12 section-about fn-section h1 center editable"">
   <p>Teosantos is an experimental design laboratory of creative and novel ideas.</p> <p>Both a physical space and state of mind, Teosantos operates with experiments and inquisitive play where ideas, art, self­expression, identity and commerce collide.</p> <p>This intersection generates strategies and processes that produce daring concepts, experiences, tools and products, which focus on engaging audiences in inquiry and imagination.</p>
 </div> <!-- /.section-about -->
 
@@ -50,7 +50,7 @@ clients:
 {% for modus in page.modus_items %}
   <div class="mb3">
     <h3 class="mt0 h2 center blue">{{ modus.title }}</h3>
-    <p class="mb0 mt0 h2 inputsansthin center">{{ modus.description }}</p>
+    <p class="mb0 mt0 h2 center">{{ modus.description }}</p>
   </div>  
 {% endfor %}
 
@@ -59,7 +59,7 @@ clients:
 
 
 <div class="sm-col-12 section-clients fn-section">
-    <ul class="mb0 mt0 list-reset center h2 inputsansthin ">
+    <ul class="mb0 mt0 list-reset center h2">
 
       {% for client in page.clients %}
         <li>{{ client }}</li>

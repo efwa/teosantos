@@ -73,15 +73,15 @@ $border-radius: 3px !default;
 
 
 
-$font-family: "Input Sans", "Helvetica Neue",Helvetica,Arial,sans-serif;
-$heading-font-family: "Input Sans Thin", "Helvetica Neue",Helvetica,Arial,sans-serif;
+$font-family: "AkkuratLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",Helvetica,Arial,sans-serif;
+$heading-font-family: $font-family;
 
 $heading-font-weight: normal;
 $heading-line-height: 1.25;
 
 // Buttons and Forms
 
-$button-font-family: "Input Sans Thin", "Helvetica Neue",Helvetica,Arial,sans-serif;
+$button-font-family: $font-family;
 $button-font-size: inherit !default;
 $button-font-weight: normal;
 $button-line-height: 1.125rem !default;

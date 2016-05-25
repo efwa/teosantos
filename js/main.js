@@ -1,81 +1,89 @@
 // Teosantos 2016-5-13
 
-console.log("main.js");
+var teosantos = {
 
-$( ".nav-item" ).on( "click", function(event) {
-  console.log("clicked");
-  event.preventDefault()
-});
+  Init: function(){
+
+    console.log("main.js");
+
+    $( ".nav-item" ).on( "click", function(event) {
+      console.log("clicked");
+      event.preventDefault()
+    });
 
 
-// -----------------------------------------------------------------------------------------------------------
-// Menu navigation interaction
-// -----------------------------------------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------
+    // Menu navigation interaction
+    // -----------------------------------------------------------------------------------------------------------
 
 
-// Toggle function to change the display of an element.
-function toggle(theClass, displayState){
-    var elements = document.getElementsByClassName(theClass)
+    // Toggle function to change the display of an element.
+    function toggle(theClass, displayState){
+        var elements = document.getElementsByClassName(theClass)
 
-    for (var i = 0; i < elements.length; i++){
-        elements[i].style.display = displayState;
+        for (var i = 0; i < elements.length; i++){
+            elements[i].style.display = displayState;
+        }
     }
-}
 
 
-// Go through all the .nav-items, when clicked change the section the coorisponding section. 
-[].forEach.call(document.querySelectorAll('.nav-item'), function(el) {
-  
-  // Get the section from the data attribute
-  var section = el.getAttribute('data-section')
-
-
-  // When a nav-item is clicked. 
-  el.addEventListener('click', function(e) {
+    // Go through all the .nav-items, when clicked change the section the coorisponding section. 
+    [].forEach.call(document.querySelectorAll('.nav-item'), function(el) {
       
-      // Go ahead remove the selected state from all nav-items
-      removeSelected();
+      // Get the section from the data attribute
+      var section = el.getAttribute('data-section')
 
-      // Bit of code to remove wildcard class from body
-      // http://stackoverflow.com/a/10835425
-      var prefix = "section";
-      var classes = document.getElementsByTagName('body')[0].className.split(" ").filter(function(c) {
-          return c.lastIndexOf(prefix, 0) !== 0;
-      });
-      document.getElementsByTagName('body')[0].className = classes.join(" ").trim();
-    
-      
-      // Set the val from the clicked nav-items's data-section 
-      document.getElementsByTagName('body')[0].classList.add(section);
-      
-         
+
+      // When a nav-item is clicked. 
+      el.addEventListener('click', function(e) {
+          
+          // Go ahead remove the selected state from all nav-items
+          removeSelected();
+
+          // Bit of code to remove wildcard class from body
+          // http://stackoverflow.com/a/10835425
+          var prefix = "section";
+          var classes = document.getElementsByTagName('body')[0].className.split(" ").filter(function(c) {
+              return c.lastIndexOf(prefix, 0) !== 0;
+          });
+          document.getElementsByTagName('body')[0].className = classes.join(" ").trim();
+        
+          
+          // Set the val from the clicked nav-items's data-section 
+          document.getElementsByTagName('body')[0].classList.add(section);
+          
+             
+          var navItems = document.querySelectorAll('.nav-item');
+
+          // Now go through all the nav=items again and set the selected state. 
+          for (var i = 0, len = navItems.length; i < len; i++) {
+              if (navItems[i].getAttribute('data-section') == section) {
+                
+                  navItems[i].classList.add("selected");
+        
+              }
+          }   
+          
+          
+          e.preventDefault();
+      })
+    })
+
+
+    // Small lil function to remove selected from all nav-items, clean sweep. 
+    function removeSelected(){
       var navItems = document.querySelectorAll('.nav-item');
 
-      // Now go through all the nav=items again and set the selected state. 
       for (var i = 0, len = navItems.length; i < len; i++) {
-          if (navItems[i].getAttribute('data-section') == section) {
-            
-              navItems[i].classList.add("selected");
-    
-          }
-      }   
-      
-      
-      e.preventDefault();
-  })
-})
+          navItems[i].classList.remove('selected');
+      }    
+    }
+  
+  } //Init
 
-
-// Small lil function to remove selected from all nav-items, clean sweep. 
-function removeSelected(){
-  var navItems = document.querySelectorAll('.nav-item');
-
-  for (var i = 0, len = navItems.length; i < len; i++) {
-      navItems[i].classList.remove('selected');
-  }    
 }
 
-
+teosants.Init();
 
 
 // -----------------------------------------------------------------------------------------------------------

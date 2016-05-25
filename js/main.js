@@ -10,6 +10,7 @@ if (hashName == "akkurat") {
 }
 
 
+console.time( 'test' );
 
 $( ".nav-item" ).on( "click", function(event) {
   console.log("clicked");

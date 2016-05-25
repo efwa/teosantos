@@ -1,14 +1,5 @@
 // Teosantos 2016-5-13
 
-// Font switching
-
-var hash = window.location.hash;
-var hashName = hash.split('#')[1];
-
-if (hashName == "akkurat") {
-  document.getElementsByTagName('body')[0].classList.add(hashName);
-}
-
 
 console.time( 'test' );
 

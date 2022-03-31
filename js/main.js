@@ -1,5 +1,24 @@
 // Teosantos 2016-5-13
 
+
+function frameThrottle(original) {
+    let pending = false;
+    function wrap() {
+        pending = false;
+        original();
+    }
+
+    function proxy() {
+
+        if (!pending) {
+            pending = true;
+            requestAnimationFrame(wrap);
+        }
+    }
+
+    return proxy();
+}
+
 var teosantos = {
 
   Init: function(){
@@ -255,7 +274,7 @@ var enviromap = {
 
 
 
-    window.requestAnimationFrame(function(){
+    frameThrottle(function(){
       _this.three_data.renderer.domElement.style.visibility = "visible";
       document.getElementById("three_canvas_holder").style.backgroundImage = "none";
       _this.data.drawloop_inited = true;
@@ -411,12 +430,21 @@ var enviromap = {
 
   draw: function(){
 
+    function debounce(func, timeout = 1){
+      
+      let timer;
+      return () => {
+        clearTimeout(timer);
+        timer = setTimeout(() => { func.apply(this, args); }, timeout);
+      };
+    }
+
     var _this = this;
     var draw_counter = 0;
 
     var mouseSpeed = this.settings.mouse_speed*.1;
 
-      this.drawFrameID = window.requestAnimationFrame(function(){
+      this.drawFrameID = frameThrottle(function(){
 
         _this.data.counter++;
 
@@ -453,7 +481,7 @@ var enviromap = {
 
       }
 
-      // restart loop
+
       _this.draw();
     });
 

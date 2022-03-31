@@ -35,36 +35,33 @@ clients:
   - RAPP
   - W2O
   - Walmart
+vimeo_videos_ids:
+  - 629749715
+  - 668301954
 ---
 
 <!-- Section Services -->
 <div class="sm-col-12 section-services fn-section h1 center">
 
-<div id="myVideo"></div>
-  <div id="myVideo2"></div>
+
+         
+{% for v in page.vimeo_videos_ids %}
+<div class="mb3" id="video-{{ v }}"></div>
+{% endfor %}
+
+
+
 <script>
+  {% for v in page.vimeo_videos_ids %}
   var options = {
-    url: "https://player.vimeo.com/video/629749715",
+    url: "https://player.vimeo.com/video/{{v}}",
     responsive: true
   };
-
-  var options2 = {
-    url: "https://player.vimeo.com/video/668301954",
-    responsive: true
-  };  
+  var videoPlayer = new Vimeo.Player('video-{{ v }}', options);
+  {% endfor %}
   
-  var videoPlayer = new Vimeo.Player('myVideo', options);
-  var videoPlayer2 = new Vimeo.Player('myVideo2', options2);
-  
-//   videoPlayer.on('play', function() {
-//     console.log('Played the video');
-//   });
   </script>
 
-  
-<!-- <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://player.vimeo.com/video/629749715' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
-<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://player.vimeo.com/video/668301954' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>   -->
-  
 </div>
 
 <!-- Section About -->

@@ -20,47 +20,82 @@ modus_items:
 clients:
   - AOL
   - Benjamin Moore
-  - "Bloomingdale's"
-  - Coca­Cola
+  - Bloomingdale's
+  - Coca Cola
   - Computer Associates
-  - Google
-  - 'Johnson & Johnson'
-  - Macy’s
-  - Moleskine
   - Eleven Lola
-  - 'Figliulo & Partners'
-  - Nokia
+  - Equis Labs
+  - FIG
+  - Forsman & Bodenfors
+  - Google
+  - Greater Than One
+  - Johnson & Johnson
+  - Macy’s
+  - Magnum Foundation
+  - Moleskine
   - NBCU
+  - Nokia
   - Principled Design
   - RAPP
+  - Renew Financial
+  - Simplicit
+  - Singular DTV
+  - TQ Tezos
   - W2O
   - Walmart
-vimeo_videos_ids:
-  - 629749715
-  - 668301954
+vimeo_videos:
+  - video_id: 629749715
+    title: "Map Your Code ™"
+    description: "This process helps you connect the elements that define the true essence of your brand by analyzing your visual patterns and image choices. The map helps connect the dots, to make sense of who you truly are and what you stand for (either if you are a large business, a startup or an individual creator)." 
+  - video_id: 668301954
+    title: "Facilitation Solutions"
+    description: "Through the use of the language of design, we help teams connect, in order to achieve clarity and common goals."
 ---
 
 <!-- Section Services -->
-<div class="sm-col-12 section-services fn-section h1 center">
+<div class="sm-col-12 section-services fn-section center">
 
-
+<p class="h1 px3">We are excited to announce the offering of our tailored solutions.  </p>
          
-{% for v in page.vimeo_videos_ids %}
-<div class="mb3" id="video-{{ v }}"></div>
+{% for v in page.vimeo_videos %}
+<div class="mb4">
+<h2 class="h1">{{v.title }}<h2>
+<p class="mb2">{{v.description}}</p> 
+<div class="mb3" id="video-{{ v.video_id }}"></div>
+</div>
 {% endfor %}
 
 
 
 <script>
-  {% for v in page.vimeo_videos_ids %}
+  {% for v in page.vimeo_videos %}
   var options = {
-    url: "https://player.vimeo.com/video/{{v}}",
+    url: "https://player.vimeo.com/video/{{v.video_id}}",
     responsive: true
   };
-  var videoPlayer = new Vimeo.Player('video-{{ v }}', options);
+  var videoPlayer = new Vimeo.Player('video-{{ v.video_id }}', options);
   {% endfor %}
   
   </script>
+
+
+
+
+<h2 class="h1">Our services can be tailored to your needs and organization.</h2>
+
+<h2 class="h2 blue">Additional Services:</h2>
+
+<ul class="mb0 mt0 list-reset center h2">
+  <li>Goal Setting and Creative Strategy</li>
+  <li>Experience and Product Design</li>
+  <li>Requirements Gathering</li>
+  <li>User Journey Mapping</li>
+  <li>Wire-framing</li>
+  <li>Prototyping</li> 
+</ul>
+
+
+
 
 </div>
 

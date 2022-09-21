@@ -2,22 +2,26 @@
 <html>
 
   {% include head.html %}
-
-  <body class="section-services">
+  
+  <body class="section-services" id="home">
     <div id="holder_measurement"></div>
     <div id="three_canvas_holder"></div>
-
+    <div id="nav-container-top"></div>
+    <div class="top-anchor fixed bottom-0 left-0 right-0 bg-black block center py2" style="z-index:100;">
+      <a href="#home" class="mx-auto white">Back to top</a>
+    </div>
 
     <div class="max-width-4 mx-auto">    
       
       <div class="clearfix">
         <div class="sm-col-10 mx-auto">
-          <div class="px3 py3 sm-px3 sm-py3">
+          
       
           
           {% include header.html %}
-
+          <div class="px3 py3 sm-px3 sm-py3">
           {{ content }}
+          </div>
 
         </div> <!-- /padding -->
 
@@ -32,6 +36,6 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
     <script src="/js/lib/three.min.js"></script>
     <script src="/js/lib/OBJLoader.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="/js/main.js?20220919"></script>
   </body>
 </html>

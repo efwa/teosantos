@@ -99,6 +99,34 @@ var teosantos = {
 teosantos.Init();
 
 
+// var observer = new IntersectionObserver(function(entries) {
+//   console.log("hellow")
+//   // no intersection with screen
+//   if(entries[0].intersectionRatio === 0)
+//     document.querySelector("#prime-nav").classList.add("nav-container-sticky");
+//   // fully intersects with screen
+//   else if(entries[0].intersectionRatio === 1)
+//     document.querySelector("#prime-nav").classList.remove("nav-container-sticky");
+// }, { threshold: [0,1] });
+
+// observer.observe(document.querySelector("#nav-container-top"));
+
+
+var observer = new IntersectionObserver(function(entries) {
+  // no intersection with screen
+  console.log(entries)
+  if(entries[0].intersectionRatio === 0)
+    document.querySelector("#home").classList.add("page-scrolled");
+  // fully intersects with screen
+  else if(entries[0].intersectionRatio === 1)
+    document.querySelector("#home").classList.remove("page-scrolled");
+}, { threshold: [0,1] });
+
+observer.observe(document.querySelector("#nav-container-top"));
+
+
+
+
 // -----------------------------------------------------------------------------------------------------------
 // Background Logo Animation 
 // -----------------------------------------------------------------------------------------------------------

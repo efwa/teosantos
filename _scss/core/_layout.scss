@@ -46,3 +46,9 @@ max-width: 100%;
 display: block;
 height: auto;
 }
+
+
+
+@media #{$breakpoint-xs} {
+  .sm-block { display: block }
+}

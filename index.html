@@ -45,23 +45,41 @@ clients:
   - Walmart
 vimeo_videos:
   - video_id: 629749715
-    title: "Map Your Code ™"
+    title: "Map Your Code™"
     description: "This process helps you connect the elements that define the true essence of your brand by analyzing your visual patterns and image choices. The map helps connect the dots, to make sense of who you truly are and what you stand for (either if you are a large business, a startup or an individual creator)." 
   - video_id: 668301954
     title: "Facilitation Solutions"
     description: "Through the use of the language of design, we help teams connect, in order to achieve clarity and common goals."
+  - title: "Research & Strategy"
+    video_id: 751797589
+    image: research-creative-strategy.png
+    description: "This process helps you connect the elements that define the true essence of your brand by analyzing your visual patterns and image choices. The map helps connect the dots, to make sense of who you truly are and what you stand for (either if you are a large business, a startup or an individual creator)."
 ---
 
 <!-- Section Services -->
 <div class="sm-col-12 section-services fn-section center">
 
 <p class="h1 px3">We are excited to announce the offering of our tailored solutions.  </p>
+
+
+<nav id="secondary-nav" class="center pt2 pb2 sec-nav">
+  {% for v in page.vimeo_videos %}
+    <div class="block mx-auto"><a href="#{{v.title|slugify }}" class="a-underline font-reg mx2">{{v.title }}</a></div>
+  {% endfor %}
+</nav>
+
          
 {% for v in page.vimeo_videos %}
-<div class="mb4">
-<h2 class="h1">{{v.title }}<h2>
-<p class="mb2">{{v.description}}</p> 
+<div class="mb4" id="{{v.title|slugify }}">
+<h2 class="h1 font-reg pt2">{{v.title }}<h2>
+{% if v.video_id != empty %}
 <div class="mb3" id="video-{{ v.video_id }}"></div>
+{% else %}
+<img src="/images/{{ v.image }}" />
+{% endif %}
+
+<p class="mb2">{{v.description}}</p> 
+
 </div>
 {% endfor %}
 
@@ -69,11 +87,13 @@ vimeo_videos:
 
 <script>
   {% for v in page.vimeo_videos %}
+   {% if v.video_id != empty %}
   var options = {
     url: "https://player.vimeo.com/video/{{v.video_id}}",
     responsive: true
   };
   var videoPlayer = new Vimeo.Player('video-{{ v.video_id }}', options);
+    {% endif %}
   {% endfor %}
   
   </script>
@@ -83,9 +103,9 @@ vimeo_videos:
 
 <h2 class="h1">Our services can be tailored to your needs and organization.</h2>
 
-<h2 class="h2 blue">Additional Services:</h2>
+<h2 class="h3 blue font-reg">Additional Services:</h2>
 
-<ul class="mb0 mt0 list-reset center h2">
+<ul class="mb0 mt0 list-reset center h3">
   <li>Goal Setting and Creative Strategy</li>
   <li>Experience and Product Design</li>
   <li>Requirements Gathering</li>

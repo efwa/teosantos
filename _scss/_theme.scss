@@ -6,6 +6,10 @@ svg { max-height: 100% }
 // position: fixed;
 // }
 
+html { 
+  scroll-behavior: smooth; 
+}
+
 body {
   color: #000;
   background:#FFF;
@@ -17,6 +21,46 @@ body {
 
 
 }
+
+.top-anchor {display:none;}
+.page-scrolled .top-anchor {display:block;}
+
+// #nav-container-top {
+//     background-color:#FFF;
+//     height: 1px;
+// }
+// .nav-container-sticky {background:#FFF;}
+
+// .primary-nav {
+//     position:sticky; top:0;
+//     // background:#FFF;
+//     z-index:100;
+//     height:4em;
+//     overflow:hidden;
+// }
+
+
+// .sec-nav {
+//     position:sticky;
+//     top:2.1em;
+//     z-index:100;
+//     overflow:hidden;
+// }
+
+
+
+// .sec-nav {
+//     height:3em;
+//     overflow: auto;
+//     white-space: nowrap;
+// }
+
+// .sec-nav a {
+//   display: inline-block;
+//   text-align: center;
+// }
+
+
 
 
 .wf-loading .max-width-4 {display:none;}
@@ -39,6 +83,10 @@ body {
   font-weight:400;
 }
 
+
+.font-reg {
+    font-family: $font-regular;
+}
 
 
 
